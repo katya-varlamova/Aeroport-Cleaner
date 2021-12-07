@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Airport Cleaner
+{% endblock %}
+
+
+{% block body %}
+
+<div class="content">
+    <div class="content_block index-content">
+        <div class="action_block drag-area">
+            <div id="use_file">
+                <form id="video_form" action="api/v1/gateway/upload" method="POST" enctype="multipart/form-data">
+                    <table class="uploading_table">
+                        <input accept="video/*" hidden name="file" type="file" name="file" id="input_file"
+                            class="input input_file">
+                        <input id="submit_file_button" type="submit" name="Submit" onclick="checkState()" hidden>
+                        <tr>
+                            <td>
+                                <label for="input_file" class="input_file-button" id="input_file-button">
+                                    <span class="input_file-icon-span">
+                                        <img onclick="" class="input_file-icon" id="input_file-icon"
+                                            src="../static/images/upload.png" alt="Выбрать файл">
+                                    </span>
+
+                                </label>
+                            </td>
+
+                            <td>
+                                <span class="input_file-button-text">Перетяните файл<br>или<br>Выберете из списка</span>
+                            </td>
+
+                            <td>
+                                <label for="submit_file_button">
+                                    <span id="submit_file-icon-wrapper">
+                                        <img class="submit_file-icon" src="/static/images/ok.png" alt="Ok">
+                                    </span>
+                                </label>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <!-- <span class="use_stream_link">
+                    <a href="/video_player_stream.html">
+                        Или использовать
+                        потоковое видео
+                    </a>
+                </span> -->
+            </div>
+            </form>
+
+
+        </div>
+    </div>
+
+
+
+</div>
+
+{% endblock%}

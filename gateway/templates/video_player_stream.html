@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Video Stream
+{% endblock %}
+
+{% block body %}
+
+<div class="content">
+    <div class="content_block">
+        <div class="action_block video_player">
+            <img class="stream" src="{{ url_for('video_feed') }}">
+        </div>
+
+
+        <div class="action_block video_player_buttons">
+            <!-- <span style="float: left;">
+                <span class="btn scale" btn_scale-action=1.1>+</span>
+                <span class="btn scale" btn_scale-action=1>Auto</span>
+                <span class="btn scale" btn_scale-action=0.0>-</span>
+            </span> -->
+            <span style="float: right;">
+                <span class="btn back_button">
+                    <a href="/">Вернуться</a>
+                </span>
+            </span>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

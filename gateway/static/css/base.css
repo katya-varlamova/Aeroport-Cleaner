@@ -1,0 +1,288 @@
+/* All */
+
+
+
+a{
+    text-decoration: none;
+    outline: none !important;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+*,
+*:after.
+*:before {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #c7e9f7;
+    font-size: 14pt;
+    margin: 0;
+}
+
+.content{
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+
+.content_block{
+    padding: 30px 40px;
+    margin: 20px 20px;
+    min-height: 60px;
+    background-color: #36BBCE;
+    border: 2px solid #07899b;
+    border-radius: 20px;
+}
+
+.action_block{
+    padding: 15px 20px;
+    margin-bottom: 8px;
+    /* min-height: 60px; */
+    background-color: #41daf1;
+    border: 2px solid #07899b;
+    border-radius: 20px;
+    text-align:center;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 4px 4px;
+    background-color: #3bc2d6;
+    border: 2px solid #07899b;
+    border-radius: 5px;
+    text-align:center;
+}
+
+
+
+/* Header */
+
+
+
+
+.header {
+    padding-top: 10px;
+    padding-left: 5%;
+    margin-bottom: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header_logo-text{
+    display: inline-block;
+}
+
+.header_logo{
+    height: 60px;
+    width: auto;
+    display: inline-block;
+}
+
+.product_name-span{
+    align-items: center;
+    font-size: 28pt;
+}
+
+.product_name-span:hover{
+    text-shadow:  1px 1px 2px rgb(80, 80, 80), 0 0 1em rgb(57, 103, 230);
+}
+
+.info{
+    float: right;
+}
+
+.info-span{
+    margin-top: 15px;
+    margin-right: 20px;
+    float: right;
+}
+
+.info-icon{
+    margin-top: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    float: right; 
+    cursor: pointer;  
+}
+
+.info-icon:hover{
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+#info-text{
+    max-width: 350px;
+    text-align: right;
+    padding: 8px;
+    padding-right: 40px;
+    margin-bottom: 8px;
+    background: #36BBCE;
+    border: 2px solid #07899b;
+    font-size: 14pt;
+    border-radius: 6px;
+    word-wrap: break-word;
+}
+
+
+
+/* Flash Alerts */
+
+
+
+.alert-style{
+    max-width: 350px;
+    background: #36BBCE;
+    border: 2px solid #07899b;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+}
+
+.flashes-ul{
+    z-index: 9999;
+    position:absolute;
+    margin-left: 60%;
+    list-style: none;
+}
+
+.flashes-li{
+    text-align: center;
+}
+
+.alert-delete{
+    float: right;
+    margin: 0 5px;
+    background-color: #36BBCE;
+    border: 2px solid #07899b;
+    box-shadow: none;
+    color: #07899b;
+    cursor: pointer;
+}
+
+.alert-delete:hover{
+    color: red;
+    background: #34adc0;
+    font-weight: bold;
+}
+
+
+
+/* Footer */
+
+
+
+.footer_{
+    width: 100%;
+}
+
+.footer_inner{
+    width: 100%;
+    text-align:center;
+}
+
+.company_info{
+    /* display:block;
+    width:50%;
+    margin:auto;*/
+    width:50%;
+    display:inline-block; /*Делаем строчный элемент*/
+}
+
+.company_info-table{
+    margin: auto;
+}
+
+.company_name{
+    font-size: 18pt;
+    display: inline-block;
+    color: #09799b;
+}
+
+.company_logo{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+}
+
+
+
+/* Index */
+
+
+.uploading_table{
+    text-align: center;
+}
+
+.index-content:hover{
+    background-color: #31a3b4;
+    box-shadow: 0 0 40px 30px rgb(63, 63, 63, 0.2);
+}
+
+.input_file-icon,
+.submit_file-icon{
+    width: 65px;
+    height: auto;
+    cursor: pointer;
+}
+
+.input_file-button-text{
+   margin: 0 15px;
+}
+
+#use_file{
+    display: inline-block;
+}
+
+
+
+/* Video player */
+
+
+
+.stream{
+    border: 2px solid #07899b;
+    border-radius: 8px;
+max-width: 100%;
+}
+
+
+
+
+
+/* Drag and drop  */
+
+
+
+.drag-area{
+    border: 2px dashed #07899b;
+}
+
+.dropArea-active{
+    border: 2px solid #07899b;
+    
+    box-shadow: 0 0 10px 10px rgba(230, 230, 230, 0.2) inset;
+}
+
+.btn_clear{
+    text-align: center;
+}

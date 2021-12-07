@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Video File
+{% endblock %}
+
+{% block body %}
+
+
+<div class="content">
+    <div class="content_block">
+        <div class="action_block video_player">
+            <img id="stream" class="stream" src="{{ url_for('video_feed', filename=filename) }}">
+        </div>
+
+
+        <div class="action_block video_player_buttons">
+            <!-- <span style="float: left;">
+                <span class="btn scale" btn_scale-action=1.1>+</span>
+                <span class="btn scale" btn_scale-action=1>Auto</span>
+                <span class="btn scale" btn_scale-action=0.0>-</span>
+            </span> -->
+            <span style="float: right;">
+                <span class="btn back_button">
+                    <a href="/">Вернуться</a>
+                </span>
+            </span>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+</div>
+
+<!-- <script type="text/javascript">
+    var ONE_CLICK_SCALE_CHANGE_PERCENT = 5;
+    var img = document.getElementById('stream');
+    if (!img.naturalWidth) {
+        img.naturalWidth = img.width;
+        xscale = img.naturalWidth / 100 * ONE_CLICK_SCALE_CHANGE_PERCENT;
+    }
+    if (!img.naturalHeight) {
+        img.naturalHeight = img.height;
+        yscale = img.naturalHeight / 100 * ONE_CLICK_SCALE_CHANGE_PERCENT;
+    }
+    var buttons = document.getElementsByClassName('scale');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function () {
+            var btnid = this.getAttribute('btn_scale-action');
+            switch (btnid) {
+                case '+': {
+                    img.width = img.naturalWidth * (1 + xscale);
+                    img.height = img.naturalHeight * (1 + yscale);
+                    break;
+                }
+                case '-': {
+                    img.width = img.naturalWidth * (1 - xscale);
+                    img.height = img.naturalHeight * (1 - yscale);
+                    break;
+                }
+                default: {
+                    img.width = img.naturalWidth;
+                    img.height = img.naturalHeight;
+                    break;
+                }
+            }
+        }
+    }
+</script> -->
+
+<!-- <script type="text/javascript">
+    var flag;
+    $(document).ready(function () { var flag = 0 });
+    document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("scale")) {
+            flag = 1;
+            var img = document.getElementById('stream');
+            if (!img.naturalWidth) {
+                img.naturalWidth = img.width;
+                alert(img.naturalWidth);
+            }
+            if (!img.naturalHeight) {
+                img.naturalHeight = img.height;
+                alert(img.naturalHeight);
+            }
+        }
+    });
+
+
+
+    var buttons = document.getElementsByClassName('scale');
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function () {
+            var size = this.getAttribute('btn_scale-action');
+            img.width = img.naturalWidth * size;
+            img.height = img.naturalHeight * size;
+        }
+    }
+</script>
+
+<script>
+
+    document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("btn") && e.target.classList.contains("scale_plus")) {
+
+        }
+    }); document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("btn") && e.target.classList.contains("scale_auto")) {
+
+        }
+    }); document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("btn") && e.target.classList.contains("scale_minus")) {
+
+        }
+    });
+</script> -->
+
+{% endblock %}

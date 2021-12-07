@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul class=flashes-ul>
+    {% for message in messages %}
+    <li class="flashes-li">
+        <div id="my-alert" class="my-alert alert-style" role="alert">
+            {{ message }}
+            <button class="alert-delete">x</button>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}
+
+<div class="container">
+    <header class="header">
+
+        <span class="product_name-span">
+            <a href="/">
+                <div class="header_logo-text" style="color: red;">Airport</div>
+                <img src="/static/images/jet.png" class="header_logo" alt="jet">
+                <div class="header_logo-text" style="color: blue;">cleaner</div>
+            </a>
+        </span>
+
+        <span class="info-span">
+            <img class="info-icon" src="../static/images/info.png" alt="info">
+            <div id="info-text" style="display: none;">
+                С помощью этого сервиса вы можете провести детекцию и классификацию мусора на взлетно-посадочной
+                полосе
+                аэропорта.
+            </div>
+        </span>
+
+    </header>
+
+    <body>
+
+        {% block body %}
+        {% endblock %}
+
+    </body>
+
+    <footer class="footer">
+        <div class="footer_inner">
+            <div class="company_info">
+                <a href="https://qoollo.com/">
+                    <table class="company_info-table">
+                        <tr>
+                            <td>
+
+                                <img class="company_logo" src="/static/images/qoollo_logo.png" alt="">
+                            </td>
+                            <td>
+
+                                <div class="company_name">Qoollo, 2021</div>
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+
+<script src="../static/scripts/scripts.js"></script>
+
+</html>
